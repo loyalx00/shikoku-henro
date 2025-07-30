@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Essential Shikoku Pilgrimage - A Journey Beyond the Ordinary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gold: #D4AF37;
+            --deep-navy: #1B2951;
+            --warm-white: #FEFDF8;
+            --sage-green: #9CAF88;
+            --soft-gray: #F7F7F5;
+            --charcoal: #2C2C2C;
+            --accent-blue: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            line-height: 1.6;
+            color: var(--charcoal);
+            background-color: var(--warm-white);
+            font-size: 18px;
+        }
+
+        .section {
+            padding: 80px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            height: 100vh;
+            background-image: url('https://page.gensparksite.com/v1/base64_upload/9a1028cc541107dde9472b45acc51eba');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            font-weight: 300;
+            color: white;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            line-height: 1.1;
+            text-align: left;
+        }
+
+        .hero .subtitle {
+            font-size: 1.2rem;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            text-align: left;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 48px;
+            background: rgba(212, 175, 55, 0.9);
+            color: var(--deep-navy);
+            text-decoration: none;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            border-color: var(--primary-gold);
+            color: var(--primary-gold);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 400;
+            color: var(--deep-navy);
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: var(--primary-gold);
+        }
+
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 60px;
+        }
+
+        .philosophy-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--charcoal);
+        }
+
+        .philosophy-text p {
+            margin-bottom: 2rem;
+        }
+
+        .philosophy-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .experiences-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .experience-card {
+            background: var(--soft-gray);
+            padding: 40px 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border-radius: 8px;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .experience-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 25px;
+            border-radius: 6px;
+        }
+
+        .experience-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--deep-navy);
+            margin-bottom: 15px;
+        }
+
+        .experience-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--charcoal);
+        }
+
+        .inclusions-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .inclusions-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .inclusion-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .inclusion-icon {
+            color: var(--primary-gold);
+            font-size: 1.2rem;
+            margin-top: 4px;
+        }
+
+        .exclusions {
+            margin-top: 50px;
+            padding: 30px;
+            background: rgba(212, 175, 55, 0.05);
+            border-left: 4px solid var(--primary-gold);
+            border-radius: 8px;
+        }
+
+        .exclusions h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--deep-navy);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .itinerary-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 60px;
+        }
+
+        .itinerary-card {
+            background: white;
+            padding: 50px 40px;
+            border-radius: 12px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .itinerary-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-gold), var(--sage-green));
+        }
+
+        .itinerary-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--deep-navy);
+            margin-bottom: 10px;
+        }
+
+        .itinerary-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: var(--sage-green);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+
+        .itinerary-features {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+
+        .itinerary-features li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .itinerary-features li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary-gold);
+            font-size: 1.2rem;
+        }
+
+        .pricing {
+            background: var(--soft-gray);
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .pricing h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--deep-navy);
+            margin-bottom: 15px;
+        }
+
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .contact-section {
+            background: var(--deep-navy);
+            color: var(--warm-white);
+            text-align: center;
+        }
+
+        .contact-section .section-title {
+            color: var(--warm-white);
+        }
+
+        .contact-section .section-title::after {
+            background: var(--primary-gold);
+        }
+
+        .contact-description {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            font-size: 1.2rem;
+            line-height: 1.7;
+        }
+
+        .footer {
+            background: var(--charcoal);
+            color: var(--warm-white);
+            text-align: center;
+            padding: 40px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .footer-company {
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 40px;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .close {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #aaa;
+        }
+
+        .close:hover {
+            color: #000;
+        }
+
+        .modal h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--deep-navy);
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .modal label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--charcoal);
+        }
+
+        .modal input,
+        .modal select,
+        .modal textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .modal input:focus,
+        .modal select:focus,
+        .modal textarea:focus {
+            outline: none;
+            border-color: var(--primary-gold);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-submit {
+            width: 100%;
+            background: var(--primary-gold);
+            color: var(--deep-navy);
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .form-submit:hover {
+            background: var(--deep-navy);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { 
+                font-size: 2.5rem;
+                text-align: center;
+            }
+            .hero .subtitle {
+                text-align: center;
+            }
+            .hero-content {
+                text-align: center;
+            }
+            .section { 
+                padding: 60px 20px; 
+            }
+            .philosophy-grid,
+            .experiences-grid,
+            .inclusions-list,
+            .itinerary-cards { 
+                grid-template-columns: 1fr; 
+                gap: 30px;
+            }
+            .section-title { 
+                font-size: 2.2rem; 
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>
+                No Tech.<br>
+                No Convenience.<br>
+                No Shortcuts.<br>
+                Just Walk.<br>
+                Just You.
+            </h1>
+            <p class="subtitle">Shikoku Pilgrimage</p>
+            <button class="cta-button" onclick="openBookingForm()">Request Your Journey</button>
+        </div>
+    </div>
+
+    <!-- About the Journey -->
+    <div class="section">
+        <h2 class="section-title">What This Journey Is</h2>
+        <div class="philosophy-grid">
+            <div class="philosophy-text">
+                <p>The essence lies in becoming completely absorbed in the act of walking. Without concern for distance or time, simply advancing one step at a time. When we are liberated from the constraints of obligations, plans, roles, and thoughts of past or future, we return to our authentic selves.</p>
+                
+                <p>The state of "KUU" (emptiness) taught by Kobo Daishi. It means to possess nothing and become no one in particular. Simply walk, wipe away sweat, and feel the wind. Set aside your smartphone and sense the earth through the soles of your feet. Such moments awaken dormant sensibilities within us.</p>
+            </div>
+            <img src="/img/pilgrimage.jpg" alt="Shikoku Pilgrimage Path" class="philosophy-image">
+        </div>
+    </div>
+
+    <!-- Philosophy -->
+    <div class="section" style="background: var(--soft-gray);">
+        <h2 class="section-title">What Shikoku Pilgrimage Is — and Isn't</h2>
+        <div class="philosophy-grid">
+            <img src="/img/temple.jpg" alt="Temple Architecture" class="philosophy-image">
+            <div class="philosophy-text">
+                <p>Many perceive the Shikoku pilgrimage as merely "temple visiting." However, the essence of this journey lies not in religion, but in spirituality itself.</p>
+                
+                <p>You may visit temples, or you may not. You may stop at shrines, or simply walk through the wilderness. The esoteric Buddhism perfected by Kobo Daishi aims to discover the "Buddha" within yourself. Prayer is one method, not the objective.</p>
+                
+                <p>Praying, walking, eating, conversing, enjoying—these are all the same. The circular pilgrimage route is Japan's most ancient pilgrimage path, uniquely designed as an endless circle where the journey itself, not the destination, holds meaning.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Curated Experiences -->
+    <div class="section">
+        <h2 class="section-title">Curated Experiences</h2>
+        <div class="experiences-grid">
+            <div class="experience-card">
+                <img src="/img/shojin-ryori.jpg" alt="Shojin Ryori">
+                <h3 class="experience-title">The Pilgrim's Table</h3>
+                <p class="experience-description">Seasonal cuisine from local ingredients, exceptional shojin ryori, and intimate meals with local residents. Food that honors the present moment rather than mere aesthetics.</p>
+            </div>
+            
+            <div class="experience-card">
+                <img src="/img/washi.jpg" alt="Washi Handmade">
+                <h3 class="experience-title">Culture Beyond the Path</h3>
+                <p class="experience-description">Washi papermaking,indigo dyeing, calligraphy, and Zen practices. Living culture experiences where encounters and craftsmanship unite as one.</p>
+            </div>
+            
+            <div class="experience-card">
+                <img src="/img/gomagyo.jpg" alt="gomagyo">
+                <h3 class="experience-title">Listening to the Heart</h3>
+                <p class="experience-description">Waterfall meditation, fire rituals, and contemplation in darkness. Spiritual tranquility that transcends the boundaries of faith.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- What's Included -->
+    <div class="section" style="background: var(--soft-gray);">
+        <h2 class="section-title">What's Included — All Inclusive</h2>
+        <div class="inclusions-content">
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 40px; color: var(--charcoal);">
+                This journey is entirely all-inclusive. Everything is meticulously arranged, allowing you to simply walk.
+            </p>
+            
+            <div class="inclusions-list">
+                <div class="inclusion-item">
+                    <span class="inclusion-icon">✓</span>
+                    <span>Luxury accommodation throughout your stay</span>
+                </div>
+                <div class="inclusion-item">
+                    <span class="inclusion-icon">✓</span>
+                    <span>All meals including experiential dining</span>
+                </div>
+                <div class="inclusion-item">
+                    <span class="inclusion-icon">✓</span>
+                    <span>Cultural immersions (washi, indigo, Zen, fire rituals)</span>
+                </div>
+                <div class="inclusion-item">
+                    <span class="inclusion-icon">✓</span>
+                    <span>Private transportation and luggage transfer</span>
+                </div>
+                <div class="inclusion-item">
+                    <span class="inclusion-icon">✓</span>
+                    <span>Complete pilgrimage attire and equipment</span>
+                </div>
+                <div class="inclusion-item">
+                    <span class="inclusion-icon">✓</span>
+                    <span>Personal guide and interpreter</span>
+                </div>
+            </div>
+            
+            <div class="exclusions">
+                <h4>Not Included:</h4>
+                <ul style="list-style: none;">
+                    <li style="margin-bottom: 8px;">• International flights to Tokushima Airport</li>
+                    <li style="margin-bottom: 8px;">• Personal purchases and premium beverages</li>
+                    <li style="margin-bottom: 8px;">• Medical expenses and travel insurance</li>
+                    <li>• Replacement of lost personal items</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bespoke Itineraries -->
+    <div class="section">
+        <h2 class="section-title">Bespoke Itineraries</h2>
+        <div class="itinerary-cards">
+            <div class="itinerary-card">
+                <h3 class="itinerary-title">Introductory Awakening</h3>
+                <p class="itinerary-subtitle">180km | 2 nights, 3 days</p>
+                <ul class="itinerary-features">
+                    <li>Temple orientation and immersion</li>
+                    <li>Handmade washi paper experience</li>
+                    <li>Sacred mountain climbing</li>
+                    <li>Waterfall meditation</li>
+                    <li>Temple accommodation</li>
+                </ul>
+                <div class="pricing">
+                    <h4>Investment:</h4>
+                    <div class="price-item">
+                        <span>1-2 guests (single accommodation):</span>
+                        <span>¥500,000</span>
+                    </div>
+                    <div class="price-item">
+                        <span>3-4 guests (dual accommodation):</span>
+                        <span>¥800,000</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="itinerary-card">
+                <h3 class="itinerary-title">From Initiation to Discipline</h3>
+                <p class="itinerary-subtitle">450km | 7 nights, 8 days</p>
+                <ul class="itinerary-features">
+                    <li>Extended temple walking and cycling</li>
+                    <li>Indigo dyeing and traditional crafts</li>
+                    <li>Mountain path challenges</li>
+                    <li>Fire ritual ceremonies</li>
+                    <li>Coastal meditation walks</li>
+                </ul>
+                <div class="pricing">
+                    <h4>Investment:</h4>
+                    <div class="price-item">
+                        <span>1-2 guests (single accommodation):</span>
+                        <span>¥1,000,000</span>
+                    </div>
+                    <div class="price-item">
+                        <span>3-4 guests (dual accommodation):</span>
+                        <span>¥1,500,000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div style="margin-top: 60px; text-align: center;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--deep-navy); margin-bottom: 20px;">Complete Customization Available</h3>
+            <p style="max-width: 600px; margin: 0 auto; font-size: 1.1rem; line-height: 1.7;">
+                Departure location, duration, and experiential content entirely bespoke. Combinations with Shikoku region and Naoshima Art experiences possible. Native-level English, French, Spanish, and Mandarin interpretation available. Maximum four guests for completely private tours with unlimited customization possibilities.
+            </p>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="section contact-section" id="contact">
+        <h2 class="section-title">Private Consultation</h2>
+        <div class="contact-description">
+            <p>This journey is not a predetermined product, but a "sensory voyage" crafted together with you. The distance you wish to walk and the experiences you seek need not be decided yet. First, share with us your current state of being.</p>
+        </div>
+        <button class="cta-button" onclick="openBookingForm()" style="background: var(--primary-gold); color: var(--deep-navy);">Request Bespoke Consultation</button>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-company">Loyal Experience Inc.</div>
+        <div>1-23-14 Jinnan, Shibuya-ku, Tokyo 150-0041</div>
+        <div style="margin-top: 15px;">
+            <span><a href="https://loyalx.co.jp">https://loyalx.co.jp</a></span> | 
+            <span><a href="https://www.instagram.com/shikokupilgrimage/">Instagram @shikokupilgrimage</a></span>
+        </div>
+    </div>
+
+    <!-- Booking Form Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeBookingForm()">&times;</span>
+            <h2>Request Custom Journey</h2>
+            <form id="bookingForm">
+                <div>
+                    <label>Nickname</label>
+                    <input type="text" name="nickname" required>
+                </div>
+                
+                <div>
+                    <label>Country of Residence</label>
+                    <input type="text" name="country" required>
+                </div>
+                
+                <div class="form-row">
+                    <div>
+                        <label>Adults (13+ years)</label>
+                        <select name="adults">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Children (0-12 years, FREE)</label>
+                        <select name="children">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div>
+                    <label>Gender Distribution</label>
+                    <input type="text" name="gender" placeholder="e.g., 2 Male, 1 Female">
+                </div>
+                
+                <div class="form-row">
+                    <div>
+                        <label>Start Date</label>
+                        <input type="date" name="startDate" required>
+                    </div>
+                    <div>
+                        <label>End Date</label>
+                        <input type="date" name="endDate" required>
+                    </div>
+                </div>
+                
+                <div>
+                    <label>Preferred Pilgrimage Style</label>
+                    <select name="style">
+                        <option>All walking</option>
+                        <option>Walking + Public transport</option>
+                        <option>Walking + Bicycle</option>
+                        <option>Walking + Car</option>
+                        <option>All bicycle</option>
+                        <option>All car</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label>Special Needs or Restrictions</label>
+                    <textarea name="specialNeeds" placeholder="Medical conditions, dietary restrictions, religious considerations, physical limitations, etc."></textarea>
+                </div>
+                
+                <div>
+                    <label>Quote Delivery Contact</label>
+                    <input type="email" name="contact" placeholder="Email address or SNS account" required>
+                </div>
+                
+                <div>
+                    <label>Quote Deadline</label>
+                    <input type="date" name="deadline">
+                </div>
+                
+                <button type="submit" class="form-submit">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openBookingForm() {
+            document.getElementById('bookingModal').style.display = 'block';
+        }
+        
+        function closeBookingForm() {
+            document.getElementById('bookingModal').style.display = 'none';
+        }
+        
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('bookingModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+        
+        // Handle form submission
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+            
+            // Create email content
+            const subject = encodeURIComponent(`Shikoku Pilgrimage Custom Journey Request - ${data.nickname}`);
+            const body = encodeURIComponent(`
+Dear Team,
+
+I would like to request a custom Shikoku pilgrimage journey with the following details:
+
+GUEST INFORMATION:
+- Nickname: ${data.nickname}
+- Country of Residence: ${data.country}
+- Adults (13+ years): ${data.adults}
+- Children (0-12 years): ${data.children}
+- Gender Distribution: ${data.gender}
+
+JOURNEY DETAILS:
+- Start Date: ${data.startDate}
+- End Date: ${data.endDate}
+- Preferred Pilgrimage Style: ${data.style}
+
+SPECIAL REQUIREMENTS:
+${data.specialNeeds}
+
+CONTACT INFORMATION:
+- Contact Method: ${data.contact}
+- Quote Deadline: ${data.deadline}
+
+Please provide a detailed quote and itinerary for this custom journey.
+
+Thank you for your time and consideration.
+
+Best regards,
+${data.nickname}
+            `);
+            
+            // Create mailto link with CC
+            const mailtoLink = `mailto:info@loyalx.co.jp?cc=shimizu@loyalx.co.jp&subject=${subject}&body=${body}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Show confirmation and close modal
+            alert('Thank you for your request! Your email client will open to send the inquiry. We will contact you within 24 hours.');
+            closeBookingForm();
+        });
+        
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDns7zvQoCWpPjGVuHJhhgxf7%2BfsnOOGBYGUjyTYKYPOVQqGBzRTCbgVmWVLi%2FZ8un05ZRtJ39YYnAlaVAbMiAbWLS0ESH4K6q2HvR9iPLspRvn%2FcrRa8Q%2Fyg4RjFo%2BEgaKov0LdFOfyNi5N%2BKH0kumqI%2BFrn%2BdBn5dyay6vNbfgDlkc2ZW7tzp8dMVdch2HRVxpFYK17hMqfqxjKEffbaKx1XEuKGMF1lDMSMyDRdv%2BrMagS1%2BDkkDJS3%2FSStvF5ezZkH62W7fJGq6bUzy75dG0wQOC9YMk2xcwnCQO7kPLdZtEI41vt9quP%2FgEheSochZ6frNslvCMoMmC8928b%2BdHPF5W4hoawLCtiWR5OOhwnjid%2Fv%2FBOqjTptgAzMZRx9iSMo8SnUOxO4gwrLGhesUTqWS2YtJES8cur9fcBxIDOjR3CfrIQnNbSzy%2F3q8MwTusXm51ItGqO1asIq4WODDW5VLznTjDdYbCGa4MveyASDCDKP6kzrmw3dwShH%2BBxZOTH7WwCXGMMLvWWGaCvx2U%3D";
+        window.__genspark_locale = "ja-JP";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDns7zvQoCWpPjGVuHJhhgxf7+fsnOOGBYGUjyTYKYPOVQqGBzRTCbgVmWVLi/Z8un05ZRtJ39YYnAlaVAbMiAbWLS0ESH4K6q2HvR9iPLspRvn/crRa8Q/yg4RjFo+EgaKov0LdFOfyNi5N+KH0kumqI+Frn+dBn5dyay6vNbfgDlkc2ZW7tzp8dMVdch2HRVxpFYK17hMqfqxjKEffbaKx1XEuKGMF1lDMSMyDRdv+rMagS1+DkkDJS3/SStvF5ezZkH62W7fJGq6bUzy75dG0wQOC9YMk2xcwnCQO7kPLdZtEI41vt9quP/gEheSochZ6frNslvCMoMmC8928b+dHPF5W4hoawLCtiWR5OOhwnjid/v/BOqjTptgAzMZRx9iSMo8SnUOxO4gwrLGhesUTqWS2YtJES8cur9fcBxIDOjR3CfrIQnNbSzy/3q8MwTusXm51ItGqO1asIq4WODDW5VLznTjDdYbCGa4MveyASDCDKP6kzrmw3dwShH+BxZOTH7WwCXGMMLvWWGaCvx2U=";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    
