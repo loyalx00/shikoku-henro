@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shikoku Henro|The Essential Shikoku Pilgrimage</title>
+    <title>Shikoku Henro｜Shikoku Pilgrimage - A Journey Beyond the Ordinary</title>
+    <meta name="description" content="Leave behind your roles, plans, and screens. On the Shikoku Pilgrimage, each step reconnects you with the earth, the present moment, and your forgotten senses. Not a religious trip — a spiritual reset.">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -507,8 +508,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="hero">
-    <iframe class="hero-video" 
-        src="https://www.youtube.com/embed/vQi1Sx4S8HY?autoplay=1&mute=1&playsinline=1&loop=1&playlist=vQi1Sx4S8HY&controls=0&start=7&showinfo=0&modestbranding=1&iv_load_policy=3" 
+    <iframe class="hero-video" id="hero-video-player"
+        src="" 
         frameborder="0" 
         allow="autoplay; encrypted-media">
     </iframe>
@@ -779,6 +780,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <script>
+    // 既存のモーダル用スクリプト
     function openBookingForm() {
         document.getElementById('bookingModal').style.display = 'block';
     }
@@ -787,7 +789,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         document.getElementById('bookingModal').style.display = 'none';
     }
     
-    // Close modal when clicking outside
     window.onclick = function(event) {
         const modal = document.getElementById('bookingModal');
         if (event.target == modal) {
@@ -795,14 +796,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
     }
     
-    // Handle form submission
     document.getElementById('bookingForm').addEventListener('submit', function(e) {
         e.preventDefault();
-        
         const formData = new FormData(e.target);
         const data = Object.fromEntries(formData);
-        
-        // Create email content
         const subject = encodeURIComponent(`Shikoku Pilgrimage Custom Journey Request - ${data.nickname}`);
         const body = encodeURIComponent(`
 Dear Team,
@@ -835,19 +832,12 @@ Thank you for your time and consideration.
 Best regards,
 ${data.nickname}
         `);
-        
-        // Create mailto link with CC
         const mailtoLink = `mailto:info@loyalx.co.jp?cc=shimizu@loyalx.co.jp&subject=${subject}&body=${body}`;
-        
-        // Open email client
         window.location.href = mailtoLink;
-        
-        // Show confirmation and close modal
         alert('Thank you for your request! Your email client will open to send the inquiry. We will contact you within 24 hours.');
         closeBookingForm();
     });
     
-    // Smooth scrolling for navigation
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -855,6 +845,28 @@ ${data.nickname}
                 behavior: 'smooth'
             });
         });
+    });
+
+    // --- ↓↓↓ ここからが新しい動画用のスクリプトです ↓↓↓ ---
+    document.addEventListener('DOMContentLoaded', function() {
+        const videoPlayer = document.getElementById('hero-video-player');
+        
+        // 動画が設定されているか確認
+        if (videoPlayer) {
+            const videoId = 'vQi1Sx4S8HY';
+            let startTime = 0; // PC用のデフォルト開始時間
+            
+            // 画面の横幅が768px以下（一般的なスマホ・タブレット）の場合
+            if (window.innerWidth <= 768) {
+                startTime = 7; // スマホ用の開始時間を7秒に設定
+            }
+            
+            // ループなし、開始時間のみを適用したURLを組み立て
+            const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&playsinline=1&start=${startTime}`;
+            
+            // iframeのsrcに最終的なURLを設定
+            videoPlayer.src = videoUrl;
+        }
     });
 </script>
 </body>
