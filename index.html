@@ -50,6 +50,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             align-items: center;
             position: relative;
             overflow: hidden;
+            background-color: #000; /* 動画読み込み中の背景色 */
         }
 
         .hero-video {
@@ -505,8 +506,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5ZC95HBQ"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="hero">
-        <iframe class="hero-video"
-            src="https://www.youtube.com/embed/vQi1Sx4S8HY?autoplay=1&mute=1&loop=1&playlist=vQi1Sx4S8HY&controls=0&showinfo=0&modestbranding=1&iv_load_policy=3&playsinline=1"
+        <iframe id="heroVideo" class="hero-video"
+            src=""
             frameborder="0"
             allow="autoplay; encrypted-media"
             allowfullscreen>
@@ -778,83 +779,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <script>
-        function openBookingForm() {
-            document.getElementById('bookingModal').style.display = 'block';
-        }
-        
-        function closeBookingForm() {
-            document.getElementById('bookingModal').style.display = 'none';
-        }
-        
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            const modal = document.getElementById('bookingModal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
-        }
-        
-        // Handle form submission
-        document.getElementById('bookingForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formData = new FormData(e.target);
-            const data = Object.fromEntries(formData);
-            
-            // Create email content
-            const subject = encodeURIComponent(`Shikoku Pilgrimage Custom Journey Request - ${data.nickname}`);
-            const body = encodeURIComponent(`
-Dear Team,
-
-I would like to request a custom Shikoku pilgrimage journey with the following details:
-
-GUEST INFORMATION:
-- Nickname: ${data.nickname}
-- Country of Residence: ${data.country}
-- Adults (13+ years): ${data.adults}
-- Children (0-12 years): ${data.children}
-- Gender Distribution: ${data.gender}
-
-JOURNEY DETAILS:
-- Start Date: ${data.startDate}
-- End Date: ${data.endDate}
-- Preferred Pilgrimage Style: ${data.style}
-
-SPECIAL REQUIREMENTS:
-${data.specialNeeds}
-
-CONTACT INFORMATION:
-- Contact Method: ${data.contact}
-- Quote Deadline: ${data.deadline}
-
-Please provide a detailed quote and itinerary for this custom journey.
-
-Thank you for your time and consideration.
-
-Best regards,
-${data.nickname}
-            `);
-            
-            // Create mailto link with CC
-            const mailtoLink = `mailto:info@loyalx.co.jp?cc=shimizu@loyalx.co.jp&subject=${subject}&body=${body}`;
-            
-            // Open email client
-            window.location.href = mailtoLink;
-            
-            // Show confirmation and close modal
-            alert('Thank you for your request! Your email client will open to send the inquiry. We will contact you within 24 hours.');
-            closeBookingForm();
-        });
-        
-        // Smooth scrolling for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+        // Hero Video Script
+        document.addEventListener('DOMContentLoaded', function() {
+            const videoFrame = document.getElementById('heroVideo');
+            if (videoFrame) {
+                const videoId = 'vQi1Sx4S8HY';
+                const baseParams = 'autoplay=1&mute=1&loop=1&playlist=' + video
