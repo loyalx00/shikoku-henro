@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Essential Shikoku Pilgrimage - A Journey Beyond the Ordinary</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
- <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+ <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5ZC95HBQ');</script>
-<!-- End Google Tag Manager -->
- <style>
+<style>
         * {
             margin: 0;
             padding: 0;
@@ -45,18 +43,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         .hero {
             height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
             position: relative;
             overflow: hidden;
         }
 
-        .hero iframe {
+        .hero-video {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 50%;
+            left: 50%;
+            width: 100vw;
+            height: 56.25vw; /* 16:9 Aspect Ratio */
+            min-height: 100vh;
+            min-width: 177.77vh; /* 16:9 Aspect Ratio */
+            transform: translate(-50%, -50%);
+            z-index: -2;
             pointer-events: none;
-            z-index: 0;
         }
 
         .hero::before {
@@ -67,6 +73,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             right: 0;
             bottom: 0;
             background: rgba(0, 0, 0, 0.3);
+            z-index: -1;
         }
 
         .hero-content {
@@ -359,8 +366,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             font-size: 0.9rem;
         }
 
+        .footer a {
+            color: var(--warm-white);
+        }
+
         .footer-company {
-            color: white !important;
             font-weight: 500;
             margin-bottom: 10px;
         }
@@ -492,33 +502,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 <body>
 
-<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5ZC95HBQ"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
- 
- <!-- Hero Section -->
 <div class="hero">
-    <iframe src="https://www.youtube.com/embed/vQi1Sx4S8HY?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1&rel=0&loop=1&playlist=vQi1Sx4S8HY"
-        frameborder="0"
-        allow="autoplay; encrypted-media"
-        allowfullscreen
-        style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;">
-    </iframe>
-    <div class="hero-content">
-        <h1>
-            No Tech.<br>
-            No Convenience.<br>
-            No Shortcuts.<br>
-            Just Walk.<br>
-            Just You.
-        </h1>
-        <p class="subtitle">Shikoku Pilgrimage</p>
-        <button class="cta-button" onclick="openBookingForm()">Request Your Journey</button>
+        <iframe class="hero-video"
+            src="https://www.youtube.com/embed/vQi1Sx4S8HY?autoplay=1&mute=1&loop=1&playlist=vQi1Sx4S8HY&controls=0&showinfo=0&modestbranding=1&iv_load_policy=3&playsinline=1"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+        </iframe>
+        <div class="hero-content">
+            <h1>
+                No Tech.<br>
+                No Convenience.<br>
+                No Shortcuts.<br>
+                Just Walk.<br>
+                Just You.
+            </h1>
+            <p class="subtitle">Shikoku Pilgrimage</p>
+            <button class="cta-button" onclick="openBookingForm()">Request Your Journey</button>
+        </div>
     </div>
-</div>
 
-    <!-- About the Journey -->
     <div class="section">
         <h2 class="section-title">What This Journey Is</h2>
         <div class="philosophy-grid">
@@ -531,7 +536,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </div>
 
-    <!-- Philosophy -->
     <div class="section" style="background: var(--soft-gray);">
         <h2 class="section-title">What Shikoku Pilgrimage Is — and Isn't</h2>
         <div class="philosophy-grid">
@@ -546,7 +550,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </div>
 
-    <!-- Curated Experiences -->
     <div class="section">
         <h2 class="section-title">Curated Experiences</h2>
         <div class="experiences-grid">
@@ -570,7 +573,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </div>
 
-    <!-- What's Included -->
     <div class="section" style="background: var(--soft-gray);">
         <h2 class="section-title">What's Included — All Inclusive</h2>
         <div class="inclusions-content">
@@ -617,7 +619,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </div>
 
-    <!-- Bespoke Itineraries -->
     <div class="section">
         <h2 class="section-title">Bespoke Itineraries</h2>
         <div class="itinerary-cards">
@@ -676,7 +677,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </div>
 
-    <!-- Contact -->
     <div class="section contact-section" id="contact">
         <h2 class="section-title">Private Consultation</h2>
         <div class="contact-description">
@@ -685,7 +685,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <button class="cta-button" onclick="openBookingForm()" style="background: var(--primary-gold); color: var(--deep-navy);">Request Bespoke Consultation</button>
     </div>
 
-    <!-- Footer -->
     <div class="footer">
         <div class="footer-company">Loyal Experience Inc.</div>
         <div>1-23-14 Jinnan, Shibuya-ku, Tokyo 150-0041</div>
@@ -695,7 +694,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </div>
 
-    <!-- Booking Form Modal -->
     <div id="bookingModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeBookingForm()">&times;</span>
@@ -860,12 +858,3 @@ ${data.nickname}
     </script>
 </body>
 </html>
-    <script id="html_badge_script1">
-        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
-            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDns7zvQoCWpPjGVuHJhhgxf7%2BfsnOOGBYGUjyTYKYPOVQqGBzRTCbgVmWVLi%2FZ8un05ZRtJ39YYnAlaVAbMiAbWLS0ESH4K6q2HvR9iPLspRvn%2FcrRa8Q%2Fyg4RjFo%2BEgaKov0LdFOfyNi5N%2BKH0kumqI%2BFrn%2BdBn5dyay6vNbfgDlkc2ZW7tzp8dMVdch2HRVxpFYK17hMqfqxjKEffbaKx1XEuKGMF1lDMSMyDRdv%2BrMagS1%2BDkkDJS3%2FSStvF5ezZkH62W7fJGq6bUzy75dG0wQOC9YMk2xcwnCQO7kPLdZtEI41vt9quP%2FgEheSochZ6frNslvCMoMmC8928b%2BdHPF5W4hoawLCtiWR5OOhwnjid%2Fv%2FBOqjTptgAzMZRx9iSMo8SnUOxO4gwrLGhesUTqWS2YtJES8cur9fcBxIDOjR3CfrIQnNbSzy%2F3q8MwTusXm51ItGqO1asIq4WODDW5VLznTjDdYbCGa4MveyASDCDKP6kzrmw3dwShH%2BBxZOTH7WwCXGMMLvWWGaCvx2U%3D";
-        window.__genspark_locale = "ja-JP";
-        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDns7zvQoCWpPjGVuHJhhgxf7+fsnOOGBYGUjyTYKYPOVQqGBzRTCbgVmWVLi/Z8un05ZRtJ39YYnAlaVAbMiAbWLS0ESH4K6q2HvR9iPLspRvn/crRa8Q/yg4RjFo+EgaKov0LdFOfyNi5N+KH0kumqI+Frn+dBn5dyay6vNbfgDlkc2ZW7tzp8dMVdch2HRVxpFYK17hMqfqxjKEffbaKx1XEuKGMF1lDMSMyDRdv+rMagS1+DkkDJS3/SStvF5ezZkH62W7fJGq6bUzy75dG0wQOC9YMk2xcwnCQO7kPLdZtEI41vt9quP/gEheSochZ6frNslvCMoMmC8928b+dHPF5W4hoawLCtiWR5OOhwnjid/v/BOqjTptgAzMZRx9iSMo8SnUOxO4gwrLGhesUTqWS2YtJES8cur9fcBxIDOjR3CfrIQnNbSzy/3q8MwTusXm51ItGqO1asIq4WODDW5VLznTjDdYbCGa4MveyASDCDKP6kzrmw3dwShH+BxZOTH7WwCXGMMLvWWGaCvx2U=";
-    </script>
-    
-    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
-    
