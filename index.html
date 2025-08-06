@@ -471,6 +471,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             color: white;
         }
 
+        .sound-toggle {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: rgba(0,0,0,0.6);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+
         @media (max-width: 768px) {
             .hero h1 { 
                 font-size: 2.5rem;
@@ -523,6 +538,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p class="subtitle">Shikoku Pilgrimage</p>
             <button class="cta-button" onclick="openBookingForm()">Request Your Journey</button>
         </div>
+        <!-- 音声トグルボタン -->
+        <button id="soundToggle" class="sound-toggle">🔇 音声OFF</button>
+
     </div>
 
     <div class="section">
@@ -857,6 +875,54 @@ ${data.nickname}
             });
         });
     </script>
+
+<!-- YouTube API -->
+<script src="https://www.youtube.com/iframe_api"></script>
+
+<script>
+    let player;
+    let isMuted = true;
+    const isMobile = window.innerWidth <= 768;
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('heroVideo', {
+            videoId: 'vQi1Sx4S8HY',
+            playerVars: {
+                autoplay: 1,
+                mute: 1,
+                loop: 1,
+                playlist: 'vQi1Sx4S8HY',
+                controls: 0,
+                showinfo: 0,
+                modestbranding: 1,
+                iv_load_policy: 3,
+                playsinline: 1,
+                start: isMobile ? 7 : 0
+            },
+            events: {
+                onReady: function (event) {
+                    event.target.playVideo();
+                }
+            }
+        });
+    }
+
+    document.getElementById("soundToggle").addEventListener("click", function () {
+        if (!player) return;
+
+        if (isMuted) {
+            player.unMute();
+            this.textContent = "🔊 音声ON";
+        } else {
+            player.mute();
+            this.textContent = "🔇 音声OFF";
+        }
+
+        isMuted = !isMuted;
+    });
+</script>
+
+
 </body>
 </html>
 }
