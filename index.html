@@ -45,13 +45,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         .hero {
             height: 100vh;
-            background-image: url('https://page.gensparksite.com/v1/base64_upload/9a1028cc541107dde9472b45acc51eba');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            display: flex;
-            align-items: center;
             position: relative;
+            overflow: hidden;
+        }
+
+        .hero iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
         }
 
         .hero::before {
@@ -355,6 +360,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
 
         .footer-company {
+            color: white !important;
             font-weight: 500;
             margin-bottom: 10px;
         }
@@ -491,20 +497,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
  
-    <!-- Hero Section -->
-    <div class="hero">
-        <div class="hero-content">
-            <h1>
-                No Tech.<br>
-                No Convenience.<br>
-                No Shortcuts.<br>
-                Just Walk.<br>
-                Just You.
-            </h1>
-            <p class="subtitle">Shikoku Pilgrimage</p>
-            <button class="cta-button" onclick="openBookingForm()">Request Your Journey</button>
-        </div>
+ <!-- Hero Section -->
+<div class="hero">
+    <iframe src="https://www.youtube.com/embed/vQi1Sx4S8HY?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1&rel=0&loop=1&playlist=vQi1Sx4S8HY"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+        style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;">
+    </iframe>
+    <div class="hero-content">
+        <h1>
+            No Tech.<br>
+            No Convenience.<br>
+            No Shortcuts.<br>
+            Just Walk.<br>
+            Just You.
+        </h1>
+        <p class="subtitle">Shikoku Pilgrimage</p>
+        <button class="cta-button" onclick="openBookingForm()">Request Your Journey</button>
     </div>
+</div>
 
     <!-- About the Journey -->
     <div class="section">
