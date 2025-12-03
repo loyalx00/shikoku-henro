@@ -498,6 +498,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 grid-template-columns: 1fr;
             }
         }
+/* ここから新しく追加されたスタイルだけ残す */
+        .video-section iframe {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
 
         .video-section {
         display: flex;
@@ -568,17 +577,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <img src="/img/pilgrimage.jpg" alt="Shikoku Pilgrimage Path" class="philosophy-image">
 
-            <!-- YouTube Video Embed 遍路Youtubeビデオを追加-->
-            <div class="video-section">
-            <div class="video-wrapper">
-<iframe
-                src="https://www.youtube.com/embed/ttXfo5kKqJk?si=VqACMNO-0s0WAHxc&rel=0&modestbranding=1&playsinline=1&autoplay=1&mute=1"
-                title="Shikoku Pilgrimage | Japan's Oldest Pilgrimage Route"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-                ></iframe>
-            </div>
+<div class="section video-section" style="margin:24px auto; text-align:center;">
+    <iframe
+        src="https://www.youtube.com/embed/ttXfo5kKqJk?si=VqACMNO-0s0WAHxc&origin=https://shikoku-henro.jp"
+        title="Shikoku Pilgrimage | Japan's Oldest Pilgrimage Route"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        style="display:block; margin:0 auto; width:100%; max-width:800px; aspect-ratio:16/9; border-radius:8px;">
+    </iframe>
+</div>
             </div>
         </div>
     </div>
